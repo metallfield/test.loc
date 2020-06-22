@@ -2,7 +2,7 @@
 
 
 use components\Router;
-
+use components\Response;
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -22,4 +22,13 @@ spl_autoload_register(function ($class) {
 
 
 $router = new Router();
-$router->run();
+ob_start();
+
+  $response = $router->run();
+ $text =  ob_get_clean();
+
+$resp = new Response($text);
+
+$resp->send();
+
+

@@ -1,22 +1,27 @@
 <?php
 
 use components\View;
+use components\Response;
 class NewsController extends  \components\Controller {
 
 
 
     public function actionIndex()
 	{
- return  $this->view->generate('news/index');
+		$this->resp = new Response();
+
+ return  $this->resp->view('news/index');
 	}
 
 	public function actionView($data)
 	{
+		$this->resp = new Response();
+
 	    if($data != 0 ) {
 
-            return $this->view->generate('news/view', $data);
+            return $this->resp->view('news/view', $data);
         }else {
-            return $this->view->redirect('/');
+            return $this->resp->redirect('/');
         }
 	}
 

@@ -15,7 +15,5 @@ use components\View;
      public function __construct()
      {
 
-         $this->view = new View();
-
      }
  }
