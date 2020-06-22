@@ -8,11 +8,16 @@ class View
 
    public static function generate($template_view,  $data = null)
     {
+          ob_start();
         if(is_array($data)) {
             extract($data);
         }
+      
+        include ROOT.'/views/'.$template_view.'.php';
+         $content =  ob_get_clean();
+        
+       return $content;
 
-       return include ROOT.'/views/'.$template_view.'.php';
     }
     public static function redirect($url = '/')
     {

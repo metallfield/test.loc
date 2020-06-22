@@ -1,10 +1,16 @@
 <?php
 
 use components\Controller;
+use components\Response;
 
 class HomeController extends Controller
 {
      public function actionIndex(){
-         return $this->view->generate('home');
+        
+        $this->resp = new Response();
+
+        return  $this->resp->view('home/index');
+          
+       
 }
 }
