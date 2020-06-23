@@ -11,6 +11,8 @@
 <h1>single new</h1>
 <?php
 echo $data;
-?>
-</body>
+
+ ?>
+<a href="<?php echo $router->generate('home');?>">home</a>
+ </body>
 </html>

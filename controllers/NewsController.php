@@ -1,27 +1,24 @@
 <?php
 
-use components\View;
+
 use components\Response;
+use vendor\Router;
 class NewsController extends  \components\Controller {
 
 
 
-    public function actionIndex()
+    public function index()
 	{
-		$this->resp = new Response();
+       return    $this->response->view('news/index');
 
- return  $this->resp->view('news/index');
 	}
 
-	public function actionView($data)
+	public function show($data)
 	{
-		$this->resp = new Response();
-
 	    if($data != 0 ) {
-
-            return $this->resp->view('news/view', $data);
+            return $this->response->view('news/view', ['data' => $data]);
         }else {
-            return $this->resp->redirect('/');
+            return $this->response->redirect('/');
         }
 	}
 

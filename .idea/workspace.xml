@@ -11,11 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1923cd49-a1d6-4c1e-babc-f69d753adcde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/View.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/View.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ViewResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/news/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/news/view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +59,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -71,6 +85,8 @@
       <workItem from="1592391461134" duration="4463000" />
       <workItem from="1592464310006" duration="64000" />
       <workItem from="1592465243650" duration="16022000" />
+      <workItem from="1592809398133" duration="16632000" />
+      <workItem from="1592895973698" duration="20539000" />
     </task>
     <servers />
   </component>
@@ -94,30 +110,38 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="543" y="198" width="826" height="683" key="#CLI_Interpreters/0.28.1920.1024@0.28.1920.1024" timestamp="1592466092995" />
-    <state x="736" y="327" width="432" height="425" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592477171596">
+    <state x="256" y="393" width="1399" height="293" key="#SQL_Dialects" timestamp="1592830055287">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="736" y="327" width="432" height="425" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592477171596" />
-    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog" timestamp="1592477044819">
+    <state x="256" y="393" width="1399" height="293" key="#SQL_Dialects/0.28.1920.1024@0.28.1920.1024" timestamp="1592830055287" />
+    <state x="555" y="202" width="802" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592830075925">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592477044819" />
-    <state x="755" y="466" width="401" height="148" key="NewPhpFileDialog" timestamp="1592476960239">
+    <state x="555" y="202" width="802" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592830075925" />
+    <state x="736" y="327" width="432" height="425" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592896702780">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="755" y="466" width="401" height="148" key="NewPhpFileDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592476960239" />
+    <state x="736" y="327" width="432" height="425" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592896702780" />
+    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog" timestamp="1592896831071">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592896831071" />
+    <state x="755" y="466" width="401" height="148" key="NewPhpFileDialog" timestamp="1592828380295">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="755" y="466" width="401" height="148" key="NewPhpFileDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592828380295" />
     <state x="449" y="175" key="SettingsEditor" timestamp="1592466101127">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="449" y="175" key="SettingsEditor/0.28.1920.1024@0.28.1920.1024" timestamp="1592466101127" />
-    <state x="651" y="149" width="618" height="783" key="find.popup" timestamp="1592393169479">
+    <state x="651" y="149" width="618" height="783" key="find.popup" timestamp="1592896673893">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="651" y="149" width="618" height="783" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1592393169479" />
-    <state x="623" y="247" width="672" height="677" key="run.anything.popup" timestamp="1592474293829">
+    <state x="651" y="149" width="618" height="783" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1592896673893" />
+    <state x="623" y="247" width="672" height="677" key="run.anything.popup" timestamp="1592907439940">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="623" y="247" width="672" height="677" key="run.anything.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1592474293829" />
+    <state x="623" y="247" width="672" height="677" key="run.anything.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1592907439940" />
     <state x="623" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1592479295520">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>

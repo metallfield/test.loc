@@ -1,7 +1,8 @@
 <?php
-return array(
 
-	'news/([0-9]+)' => 'news/view/$1',
-	'news' => 'news/index',
-    '' => 'home/index',
-	);
+
+use vendor\Router;
+
+$router->map( 'GET', '/', 'HomeController#index');
+$router->map('GET', '/news', 'NewsController#index', 'home');
+$router->map('GET', '/news/[i:id]', 'NewsController#show');

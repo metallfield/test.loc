@@ -1,8 +1,9 @@
 <?php
 
 
-use components\Router;
 use components\Response;
+use vendor\Router;
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -18,17 +19,17 @@ spl_autoload_register(function ($class) {
 });
 
 
-
-
+session_start();
 
 $router = new Router();
+require './config/routes.php';
 ob_start();
 
-  $response = $router->run();
- $text =  ob_get_clean();
+$router->dispatch();
+$content =  ob_get_clean();
 
-$resp = new Response($text);
+$response = new Response($content);
 
-$resp->send();
+$response->send();
 
 
