@@ -11,23 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1923cd49-a1d6-4c1e-babc-f69d753adcde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/DB.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/HtmlResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Template.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/View.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ViewResponse.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/news/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/news/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/news/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/news/view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +79,8 @@
       <workItem from="1592464310006" duration="64000" />
       <workItem from="1592465243650" duration="16022000" />
       <workItem from="1592809398133" duration="16632000" />
-      <workItem from="1592895973698" duration="20539000" />
+      <workItem from="1592895973698" duration="20870000" />
+      <workItem from="1592982162851" duration="20054000" />
     </task>
     <servers />
   </component>
@@ -122,10 +116,10 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="736" y="327" width="432" height="425" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592896702780" />
-    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog" timestamp="1592896831071">
+    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog" timestamp="1592983536839">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592896831071" />
+    <state x="682" y="260" width="555" height="560" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1592983536839" />
     <state x="755" y="466" width="401" height="148" key="NewPhpFileDialog" timestamp="1592828380295">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
@@ -138,10 +132,10 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="651" y="149" width="618" height="783" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1592896673893" />
-    <state x="623" y="247" width="672" height="677" key="run.anything.popup" timestamp="1592907439940">
+    <state x="623" y="247" width="672" height="677" key="run.anything.popup" timestamp="1592993943933">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="623" y="247" width="672" height="677" key="run.anything.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1592907439940" />
+    <state x="623" y="247" width="672" height="677" key="run.anything.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1592993943933" />
     <state x="623" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1592479295520">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>

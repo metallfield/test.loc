@@ -11,8 +11,11 @@
 <h1>single new</h1>
 <?php
 echo $data;
+if (isset($result)){
+    echo '<h1>#'.$result[0]['id'].' '. $result[0]['title'].'</h1><br><p>'.$result[0]['short_content'].'</p>';
+}
 
  ?>
-<a href="<?php echo $router->generate('home');?>">home</a>
+
  </body>
 </html>
