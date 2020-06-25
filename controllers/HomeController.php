@@ -8,7 +8,8 @@ class HomeController extends Controller
 {
      public function index(){
          $data_test = 'hello';
-
-         return $this->response->view('home/index', ['data_test' => $data_test], ' 312312312');
+         $model = new Main();
+         $result = $model->getNews();
+         return $this->response->view('home/index', ['data_test' => $data_test, 'result'=>$result], ' 312312312');
         }
 }

@@ -11,8 +11,20 @@
 <h1>single new</h1>
 <?php
 echo $data;
+if(isset($_SESSION["msg"]) && !empty($_SESSION["msg"]))
+{
+    $msg=$_SESSION["msg"];
+    echo "<div class='msgbox'>".$msg."</div>";
+    unset($_SESSION['msg']); //I have issue with this line.
+}
+if (isset($_SESSION['user'])){
+    echo 'hello '. $_SESSION['user']['name'].'<a href="/logout">logout</a>';
+
+}else{
+    echo '<a href="/login">login</a>';
+}
 if (isset($result)){
-    echo '<h1>#'.$result[0]['id'].' '. $result[0]['title'].'</h1><br><p>'.$result[0]['short_content'].'</p>';
+    echo '<h1>#'.$result['id'].' '. $result['title'].'</h1><br><p>'.$result['short_content'].'</p>';
 }
 
  ?>
