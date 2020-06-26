@@ -5,8 +5,20 @@ namespace models;
 use components\Model;
 class Main extends Model
 {
-    public function getNews() {
+    const SHOW_BY_DEFAULT = 4;
+
+    public function getAllNews()
+    {
         $result = $this->db->row('SELECT * FROM news');
+        return $result;
+    }
+    public function getNews($page = 1) {
+        $limit = Main::SHOW_BY_DEFAULT;
+
+        // Смещение (для запроса)
+        $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
+
+        $result = $this->db->row("SELECT * FROM news LIMIT $offset, $limit");
         return $result;
     }
 

@@ -1,5 +1,5 @@
 <?php
-
+$this->extends = 'layouts/header';
 ?>
 <form action="/news/create" method="POST">
     <label for="title">title</label>

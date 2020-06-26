@@ -1,5 +1,5 @@
 <?php
-
+$this->extends = 'layouts/header';
 ?>
 <form action="/news/<?php echo $result['id'];?>/edit" method="POST">
     <input type="text" name="id" hidden value="<?php echo $result['id'];?>">

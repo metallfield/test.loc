@@ -5,16 +5,19 @@ use components\Response;
 use vendor\Router;
 use components\Controller;
 use models\Main;
+use components\Pagination;
 class NewsController extends Controller {
 
 
 
-    public function index()
+    public function index($page = 1)
 	{
 
         $model = new Main();
-        $result = $model->getNews();
-       return    $this->response->view('news/index', ['result' => $result]);
+        $result = $model->getNews($page);
+        $count = count($model->getAllNews());
+         $pagination = new Pagination($count, 1, Main::SHOW_BY_DEFAULT , 'page-');
+       return $this->response->view('news/index', ['result' => $result, 'pagination' => $pagination]);
 
 	}
 

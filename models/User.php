@@ -18,11 +18,14 @@ class User extends Model
         $name = $params['name'];
         $email = $params['email'];
         $password = $params['password'];
-        return $this->db->row("INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')");
+        $result = $this->db->row("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', 'user')");
+        return $result;
     }
 
     public function checkUser($params)
     {
+
+
 
         $email = $params['email'];
         $password = $params['password'];
@@ -47,7 +50,7 @@ class User extends Model
 
     public  function getUser($params)
     {
-        $id = $params['id'];
+        $id = $params;
          $result = $this->db->row('SELECT * FROM users WHERE id='.$id);
 
          return $result[0];
@@ -56,12 +59,21 @@ class User extends Model
     public function isAdmin()
     {
          $userId = self::isLoged();
-          $user = $this->getUser($userId);
+          $user = $this->getUser($userId['id']);
           if ($user['role'] == 'admin')
           {
               return true;
           }else{
               return false;
           }
+    }
+
+    public function editInfo($params)
+    {
+        $id = $params['id'];
+             $name = $params['name'];
+            $email = $params['email'];
+            return  $this->db->row("UPDATE users SET name = '$name', email = '$email' WHERE id=".$id);
+
     }
 }

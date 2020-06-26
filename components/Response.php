@@ -8,7 +8,7 @@ class Response {
     private $content;
     private $status_code;
     private $headers;
-     
+    private $extends;
 
     public function __construct($content = '', $status_code = 200, $headers = []) {
         $this->content      = $content;
@@ -37,21 +37,28 @@ class Response {
         echo $this->content;
     }
     public function view($html, $data = [], $header = ''):self{
-
+        $template = ROOT.'/views/'.$html.'.php';
        $this->setHeader($header);
        $new = clone $this;
         ob_start();
       if(is_array($data)){
             extract($data);
       }
-
-         require ROOT.'/views/'.$html.'.php';
+        $this->extends = null;
+         require $template;
 
           $body = ob_get_clean();
-         $new->content = $body;
+          if (!$this->extends)
+          {
+              $new->content = $body;
 
-         $new->send();
-          return $new;
+              $new->send();
+              return $new;
+          }
+           $new->view($this->extends, ['content' => $body]);
+        $new->send();
+        return $new;
+
     }
 
     public  function redirect($url = '/')

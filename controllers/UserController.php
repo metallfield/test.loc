@@ -49,7 +49,7 @@ class UserController extends Controller
 
     public function logout()
     {
-        session_start();
+
         unset($_SESSION['user']);
         return $this->response->redirect('/news');
     }
@@ -58,7 +58,7 @@ class UserController extends Controller
     {
         $user = User::isLoged();
         if ($user){
-            print_r($user);
+
             return $this->response->view('/user/account',['user' => $user]);
         }else{
             return $this->response->redirect('/');
@@ -67,12 +67,18 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        if (isset($_POST['submit'])){
-            $params = $_POST;
+        if($_SESSION['user']['id'] == $id)
+        {
             $model = new User();
-            $model->editInfo($id);
-            return 
+            $result = $model->getUser($id);
+            if (isset($_POST['submit'])){
+                $params = $_POST;
+                 $model->editInfo($params);
+                 return $this->response->redirect('/account');
+            }
+            return  $this->response->view('/user/edit', ['result' => $result]);
         }
+
     }
 
 }

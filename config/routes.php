@@ -12,6 +12,7 @@ $router->map('POST', '/news/[create:action]', 'NewsController#create');
 $router->map('GET', '/news/[i:id]/[delete:action]', 'NewsController#delete');
 $router->map('GET', '/news/[i:id]/edit', 'NewsController#editPage');
 $router->map('POST', '/news/[i:id]/edit', 'NewsController#edit');
+$router->map('GET', '/news/page-[i:id]', 'NewsController#index');
 
 $router->map('GET', '/register', 'UserController#register');
 $router->map('POST', '/register', 'UserController#register');
@@ -19,9 +20,10 @@ $router->map('GET', '/login', 'UserController#login');
 $router->map('POST', '/login', 'UserController#login');
 $router->map('GET', '/logout', 'UserController#logout');
 
-$router->map('GET', '/account', 'UserController#account');
 $router->map('GET', '/user/[i:id]/edit', 'UserController#edit');
 $router->map('POST', '/user/[i:id]/edit', 'UserController#edit');
+$router->map('GET', '/account', 'UserController#account');
 
 $router->map('GET', '/admin', 'AdminController#index');
+$router->map('GET', '/admin/page-[i:id]', 'AdminController#index');
 

@@ -1,10 +1,6 @@
 <?php
-if(isset($_SESSION["msg"]) && !empty($_SESSION["msg"]))
-{
-    $msg=$_SESSION["msg"];
-    echo "<div class='msgbox'>".$msg."</div>";
-    unset($_SESSION['msg']); //I have issue with this line.
-}
+$this->extends = 'layouts/header';
+
 ?>
 
 <form action="/register" method="post">

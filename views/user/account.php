@@ -1,5 +1,5 @@
 <?php
-
+$this->extends = 'layouts/header';
 ?>
 
 <h3>Hello <?php echo $user['name']?></h3>
