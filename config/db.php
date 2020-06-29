@@ -4,6 +4,6 @@
 return [
     'host' => 'localhost',
     'name' => 'test',
-    'user' => 'dev',
-    'password' => 'dev',
+    'user' => 'root',
+    'password' => 'root',
 ];

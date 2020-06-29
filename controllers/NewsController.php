@@ -8,8 +8,6 @@ use models\Main;
 use components\Pagination;
 class NewsController extends Controller {
 
-
-
     public function index($page = 1)
 	{
 
@@ -32,8 +30,6 @@ class NewsController extends Controller {
             }else{
                 return  $this->response->redirect('/news');
             }
-
-
 	}
 
 	public function createPage(){
@@ -45,12 +41,16 @@ class NewsController extends Controller {
     if(isset($_POST['submit'])){
     $params = $_POST;
     $model = new Main();
-    $model->createNew($params);
+	 $id = $model->createNew($params);
+	  
     $_SESSION['msg'] = 'create success!';
-    $_SESSION['msg_type'] = 'success';
-    return $this->response->redirect('/admin');
+	$_SESSION['msg_type'] = 'success';
+	if (is_uploaded_file($_FILES["preview"]["tmp_name"])) {
+		
+                   move_uploaded_file($_FILES["preview"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/public/images/$id.jpeg");
+				}
+	  }
      }
-    }
 
     public function delete($id)
     {
@@ -64,7 +64,7 @@ class NewsController extends Controller {
     public function editPage($id)
     {
         $model = new Main();
-        $result = $model->getNew($id);
+		$result = $model->getNew($id);
         return $this->response->view('/news/edit', ['result' => $result]);
     }
 
@@ -73,10 +73,15 @@ class NewsController extends Controller {
         $_SESSION['msg'] = 'post edited';
         $_SESSION['msg_type'] = 'alert';
         $params = $_POST;
-
-        $model = new Main();
-        $model->editNew($params);
-        return $this->response->redirect('/admin');
+		$model = new Main();
+		 $model->editNew($params);
+		 
+                 if (is_uploaded_file($_FILES["preview"]["tmp_name"])) {
+		$id = $params['id'];
+                   move_uploaded_file($_FILES["preview"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/public/images/$id.jpeg");
+				}
+				return $this->response->redirect('/admin');
+	   
      }
 }
 

@@ -40,8 +40,9 @@ class Main extends Model
         $short = $params['short_content'];
         $content = $params['content'];
         $author = $params['author_name'];
-        $preview = $params['preview'];
-       return $this->db->row("INSERT INTO news (title, short_content, content, author_name, preview) VALUES ('$title', '$short', '$content', '$author', '$preview')");
+        $result = $this->db->row("INSERT INTO news (title, short_content, content, author_name) VALUES ('$title', '$short', '$content', '$author')");
+          return $result;
+       
     }
 
     public function deleteNew($id)
@@ -56,7 +57,7 @@ class Main extends Model
         $short = $params['short_content'];
         $content = $params['content'];
         $author = $params['author_name'];
-        $preview = $params['preview'];
-        return $this->db->row("UPDATE news SET title = '$title', short_content = '$short', content = '$content', author_name = '$author', preview = '$preview' WHERE id=".$params['id']);
+   
+        return $this->db->row("UPDATE news SET title = '$title', short_content = '$short', content = '$content', author_name = '$author' WHERE id=".$params['id']);
     }
 }

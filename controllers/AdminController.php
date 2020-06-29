@@ -16,8 +16,7 @@ class AdminController extends Controller
 
         if ($model->isAdmin())
         {
-            $_SESSION['msg'] = 'hello admin';
-            return $this->response->view('/admin/index', ['result' => $result, 'pagination' => $pagination]);
+             return $this->response->view('/admin/index', ['result' => $result, 'pagination' => $pagination]);
         }else{
             return $this->response->redirect('/');
         }

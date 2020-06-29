@@ -1,0 +1,14 @@
+.pagination li{
+	border: 1px solid lightseagreen;
+	padding: 6px;
+	margin: 20px 5px;
+}
+
+.pagination li.active{
+	color: rgb(54, 54, 202)!important;
+	background: rgba(61, 58, 58, 0.507);
+}
+
+.pagination li:hover{
+	background: grey;
+}
