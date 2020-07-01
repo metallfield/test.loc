@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$title</title>
+    <title><?php echo 'title';?></title>
     <link rel="stylesheet" href="/public/css/style.css" type="text/css">
     <link rel="stylesheet" href="/public/css/bootstrap.min.css" type="text/css">
  </head>
@@ -58,7 +58,7 @@ if(isset($_SESSION["msg"]) && !empty($_SESSION["msg"]))
     //I have issue with this line.
 }unset($_SESSION['msg']);
 ?> 
-<div class="container">
+<div class="container content">
 <?php
 echo $content;
 ?>

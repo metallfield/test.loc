@@ -18,7 +18,7 @@ class Main extends Model
         // Смещение (для запроса)
         $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
 
-        $result = $this->db->row("SELECT * FROM news LIMIT $offset, $limit");
+        $result = $this->db->row("SELECT * FROM news ORDER BY id DESC LIMIT $offset, $limit");
         return $result;
     }
 

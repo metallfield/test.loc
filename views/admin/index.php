@@ -1,6 +1,6 @@
 <?php
-$this->extends = 'layouts/header';
 
+$this->extends = 'layouts/header';
 
 ?>
 
